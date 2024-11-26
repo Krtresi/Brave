@@ -1,0 +1,213 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+/* Загальні стилі */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #221314;
+    --second-color: #000;
+    --main-color: #6e54fa;
+    --border-color: #535353;
+    --font-big: 6rem;
+    --font-medium: 3rem;
+    --font-small: 1.1rem;
+}
+
+/* Основний фон */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Стилі секцій */
+section {
+    padding: 80px 18%;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 30px 18%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.4s ease;
+}
+
+/* Секція .home */
+.home {
+    width: 100%;
+    height: 100vh;
+    background: url(./images/Дизайн\ без\ назви\ \(12\).png) center/cover no-repeat;
+    display: grid;
+    place-items: center;
+}
+
+.home-text h1 {
+    font-size: var(--font-big);
+    line-height: 1.2;
+    color: var(--second-color);
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.home-text p, .home-text a {
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.75);
+    line-height: 1.5;
+}
+
+.home-text a {
+    margin-top: 20px;
+}
+
+/* Карточки фонду */
+.fond1, .fond2, .fond3, .fond4, .fond5 {
+    background: var(--bg-color);
+    border: 40px solid var(--border-color);
+    margin-bottom: 50px;
+    padding: 20px;
+}
+
+.Levu, .Comeback, .Prutyla, .fondation, .zgraya {
+    display: flex;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+/* Опис поста */
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+    .post-header .profile-pic {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+
+.username {
+    font-weight: 600;
+}
+
+.post-footer {
+    margin-left: auto;
+    font-size: 14px;
+    color: gray;
+}
+
+.na p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+/* Кнопки */
+.donate-btn, .source-btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #8d8d8d;
+    color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    .donate-btn:hover, .source-btn:hover {
+        background-color: #d9d9d9;
+        color: #000;
+    }
+
+/* Для мобільних пристроїв */
+@media screen and (max-width: 768px) {
+    header {
+        padding: 10px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
+    .post-header .profile-pic {
+        width: 40px;
+        height: 40px;
+    }
+
+    .home-text h1 {
+        font-size: var(--font-medium);
+    }
+
+    .home-text p, .home-text a, .donate-btn, .source-btn {
+        font-size: 14px;
+    }
+}
+
+
+.advertisement {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+    .advertisement:hover {
+        transform: scale(1.02);
+    }
+
+.advertisement-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.advertisement-title {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.advertisement-description {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+.advertisement-category, .advertisement-type {
+    font-size: 0.9em;
+    color: #777;
+}
